@@ -9,6 +9,7 @@ import NoteList from "./NoteList"
 import NoteLayout from "./NoteLayout"
 import Note from "./Note"
 import EditNote from "./EditNote"
+import { Analytics } from "@vercel/analytics/react"
 
 export type Note = {
   id: string
@@ -96,6 +97,7 @@ function App() {
 
   return (
     <Container className="my-4">
+      <Analytics />
       <Routes>
         <Route
           path="/"
